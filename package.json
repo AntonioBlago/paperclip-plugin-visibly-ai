@@ -1,0 +1,55 @@
+{
+  "name": "paperclip-plugin-visibly-ai",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Paperclip connector for Visibly AI: Search Console, keywords, SERPs, competitors, backlinks and on-page checks as agent tools.",
+  "scripts": {
+    "build": "node ./esbuild.config.mjs",
+    "test": "vitest run --config ./vitest.config.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "paperclipPlugin": {
+    "manifest": "./dist/manifest.js",
+    "worker": "./dist/worker.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "paperclip",
+    "paperclip-plugin",
+    "plugin",
+    "connector",
+    "seo",
+    "search-console",
+    "geo",
+    "ai-search",
+    "visibly-ai"
+  ],
+  "author": "Antonio Blago <info@antonioblago.com> (https://www.antonioblago.com)",
+  "homepage": "https://github.com/AntonioBlago/paperclip-plugin-visibly-ai#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonioBlago/paperclip-plugin-visibly-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AntonioBlago/paperclip-plugin-visibly-ai/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@paperclipai/plugin-sdk": "2026.1023.0"
+  },
+  "devDependencies": {
+    "@paperclipai/shared": "2026.1023.0",
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.8.0",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=24.11.0"
+  }
+}
