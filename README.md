@@ -68,10 +68,13 @@ A weekly routine assigned to an SEO agent:
 npm install
 npm run typecheck
 npm test
+npm run check:mcp
 npm run build
 ```
 
 Tests run against the official Paperclip test harness with a mocked Visibly API. They make no network calls.
+`check:mcp` compares the tool paths with the [Visibly MCP server](https://github.com/AntonioBlago/visiblyai-mcp-server)
+client, which calls the same API. Rules for contributors and coding agents are in [AGENTS.md](AGENTS.md).
 
 ## About
 
